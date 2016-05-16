@@ -8,3 +8,5 @@ is a work in progress, and will be modified as seen fit.
 
 Click this link to watch the demo of the Trig App:
   https://drive.google.com/open?id=0B9RLZQe9C_U5azJHM1lZczlZcU0
+Click this link to view the MeTube website:
+  https://people.cs.clemson.edu/~kirstee/4620/
