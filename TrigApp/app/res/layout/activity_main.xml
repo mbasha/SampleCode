@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:screenOrientation="portrait" android:orientation="vertical" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:layout_gravity="right" android:id="@id/imgGetInfo" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_about" />
+        <TextView android:textSize="18.0sp" android:textStyle="italic" android:gravity="center_horizontal" android:id="@id/txtInstructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/instructions_text" />
+    </LinearLayout>
+    <com.kiskiarea.theunitcircle2.MyView android:id="@id/unit_circle_canvas" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="3.0dip" android:layout_weight="1.0" />
+</LinearLayout>
