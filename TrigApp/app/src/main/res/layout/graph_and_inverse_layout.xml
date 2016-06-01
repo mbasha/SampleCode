@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/chart2"
+        android:layout_toStartOf="@+id/cosineButton2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/cosineButton2"></LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cos"
+        android:id="@+id/cosineButton2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sine"
+        android:id="@+id/sineButton2"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/cosineButton2"
+        android:layout_toStartOf="@+id/cosineButton2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tan"
+        android:id="@+id/tangentButton2"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/cosineButton2"
+        android:layout_toEndOf="@+id/cosineButton2" />
+
+</RelativeLayout>

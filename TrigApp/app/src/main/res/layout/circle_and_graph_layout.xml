@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clearButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/angleValue"
+        android:layout_alignEnd="@+id/angleValue" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compute"
+        android:id="@+id/computeButton"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/angleText"
+        android:layout_toEndOf="@+id/angleText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/angleValue"
+        android:layout_above="@+id/clearButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Angle"
+        android:layout_alignRight="@+id/hValue"
+        android:layout_alignEnd="@+id/hValue" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hValue"
+        android:layout_above="@+id/angleValue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Hypotenuse"
+        android:layout_toStartOf="@+id/hypotenuseView"
+        android:layout_toLeftOf="@+id/hypotenuseView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aValue"
+        android:layout_above="@+id/hValue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Adjacent"
+        android:layout_toLeftOf="@+id/hypotenuseView"
+        android:layout_toStartOf="@+id/hypotenuseView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/oValue"
+        android:layout_above="@+id/aValue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Opposite"
+        android:layout_toLeftOf="@+id/hypotenuseView"
+        android:layout_toStartOf="@+id/hypotenuseView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/oValue"
+        android:src="@drawable/triangle3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opposite"
+        android:id="@+id/oppositeText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/oValue"
+        android:layout_toRightOf="@+id/oValue"
+        android:layout_toEndOf="@+id/oValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adjacent"
+        android:id="@+id/adjacentText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/angleValue"
+        android:layout_toRightOf="@+id/angleValue"
+        android:layout_toEndOf="@+id/angleValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hypotenuse"
+        android:id="@+id/hypotenuseView"
+        android:textSize="20dp"
+        android:layout_below="@+id/aValue"
+        android:layout_alignLeft="@+id/angleText"
+        android:layout_alignStart="@+id/angleText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Angle"
+        android:id="@+id/angleText"
+        android:textSize="20dp"
+        android:layout_below="@+id/oValue"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
