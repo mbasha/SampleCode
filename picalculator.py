@@ -1,6 +1,8 @@
 # using this guy as a base: https://github.com/geekpradd/PythonPi/blob/master/PythonPi.py
-# TODO: Change calculatePi to Chudnovsky Algorithm for accuracy.
- 	# http://www.craig-wood.com/nick/articles/pi-chudnovsky/
+# TODO:
+	# Change calculatePi to Chudnovsky Algorithm for accuracy.
+ 		# http://www.craig-wood.com/nick/articles/pi-chudnovsky/
+	# figure out why entry/i is reaching the else statement as a digit but is a string in calculatePi()
 
 from __future__ import print_function
 import math, sys
