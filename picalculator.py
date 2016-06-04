@@ -8,7 +8,7 @@ def calculatePi(i):
     D = decimal.Decimal
     with decimal.localcontext() as ctx:
         ctx.prec = i + 1
-        #ctx.rounding = ROUND_FLOOR
+        # ctx.rounding = ROUND_FLOOR # weird issue where this is rounding up when it shouldn't.
         pi = sum(1/Decimal(16)**k *
 		(Decimal(4)/(8*k+1) - Decimal(2)/(8*k+4) - Decimal(1)/(8*k+5) - Decimal(1)/(8*k+6))
 		# k is the amount of iterations of the summation. I selected 100
