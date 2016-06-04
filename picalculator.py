@@ -1,41 +1,30 @@
-# using this guy as a base: https://github.com/geekpradd/PythonPi/blob/master/PythonPi.py
-# TODO:
-	# Change calculatePi to Chudnovsky Algorithm for accuracy.
- 		# http://www.craig-wood.com/nick/articles/pi-chudnovsky/
-	# figure out why entry/i is reaching the else statement as a digit but is a string in calculatePi()
-
 from __future__ import print_function
-import math, sys
-from math import factorial
+import sys, decimal
 from decimal import *
-getcontext().rounding = ROUND_FLOOR
-sys.setrecursionlimit(100000)
 
-python2 = sys.version_info[0] == 2
-if python2:
-	input = raw_input
-
+# Uses the Bailey-Borwein-Plouffe formula
+# https://en.wikipedia.org/wiki/Bailey-Borwein-Plouffe_formula
 def calculatePi(i):
-	int(i)
-	print (sum(1/Decimal(16)**k *
-          (Decimal(4)/(8*k+1) -
-           Decimal(2)/(8*k+4) -
-           Decimal(1)/(8*k+5) -
-           Decimal(1)/(8*k+6)) for k in range(i)))
+    D = decimal.Decimal
+    with decimal.localcontext() as ctx:
+        ctx.prec = i + 1
+        #ctx.rounding = ROUND_FLOOR
+        pi = sum(1/Decimal(16)**k *
+		(Decimal(4)/(8*k+1) - Decimal(2)/(8*k+4) - Decimal(1)/(8*k+5) - Decimal(1)/(8*k+6))
+		# k is the amount of iterations of the summation. I selected 100
+		for k in range (100))
+    return pi
+
 
 def shell():
-	print ("Welcome to Pi Calculator. In the shell below Enter the number of digits upto which the value of Pi should be calculated or enter quit to exit")
+	entry = int(input("Welcome to Abrar Basha's Pi Calculator. Enter the number of digits of Pi you want to see or enter 0 to exit\n"))
 
 	while True:
-		print (">>> ", end='')
-		entry = input()
-		if entry == "quit":
+		if entry == 0:
 			break
-		if not entry.isdigit():
-			print ("You did not enter a number. Try again")
 		else:
 			print (calculatePi(entry))
-			#getcontext().prec=entry
+			entry = int(input("Enter the number of digits of Pi you want to see or enter 0 to exit\n"))
 
 if __name__=='__main__':
 	shell()
